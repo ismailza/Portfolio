@@ -1,5 +1,6 @@
 'use client';
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function Home() {
 
@@ -12,7 +13,11 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <Header scrollToSection={scrollToSection} />
+      <Header scrollToSection={scrollToSection}/>
+      <main className="flex-1 bg-white dark:bg-gray-900">
+
+      </main>
+      <Footer />
     </div>
-  );
+);
 }
