@@ -4,6 +4,7 @@ import Footer from "@/components/footer";
 import Link from "next/link";
 import Skill from "@/components/skill";
 import {useEffect, useState} from "react";
+import Project from "@/components/project";
 
 export default function Home() {
 
@@ -26,6 +27,8 @@ export default function Home() {
   }
 
   const [skills, setSkills] = useState([])
+  const [projects, setProjects] = useState([])
+
   /**
    * Load skills from the skills.json file
    */
@@ -34,9 +37,18 @@ export default function Home() {
     setSkills(skills)
   }
 
+  /**
+   * Load projects from the projects.json file
+   */
+  const loadProjects = async () => {
+    const projects = await require("./data/projects.json")
+    setProjects(projects)
+  }
+
   // Load skills when the component is mounted
   useEffect(() => {
     loadSkills().then()
+    loadProjects().then()
   }, [])
 
   return (
@@ -169,14 +181,36 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-4">
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-                  {skills.map((skill: {name: string, icon: string}, index) => {
+                  {skills.map((skill: { name: string, icon: string }, index) => {
                     return (
-                      <Skill key={index} name={skill.name} icon={skill.icon} />
+                      <Skill key={index} name={skill.name} icon={skill.icon}/>
                     )
                   })}
                 </div>
 
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Work */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="featured-projects">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-100">
+                  Featured Projects
+                </h2>
+                <p
+                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  Take a look at some of my recent projects.
+                </p>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-2">
+              {projects.map((project: {title: string, excerpt: string, image: string, tags: []}, index) => (
+                <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image} tags={project.tags} />
+              ))}
             </div>
           </div>
         </section>
