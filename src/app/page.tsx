@@ -2,9 +2,15 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import Link from "next/link";
+import Skill from "@/components/skill";
+import {useEffect, useState} from "react";
 
 export default function Home() {
 
+  /**
+   * Scroll to a section by its id
+   * @param id - The id of the section to scroll to
+   */
   const scrollToSection = (id: string) => {
     const section = document.getElementById(id)
     if (section) {
@@ -12,9 +18,26 @@ export default function Home() {
     }
   }
 
+  /**
+   * Download the resume file
+   */
   const downloadResume = () => {
     window.open("/resume.pdf", "_blank")
   }
+
+  const [skills, setSkills] = useState([])
+  /**
+   * Load skills from the skills.json file
+   */
+  const loadSkills = async () => {
+    const skills = await require("./data/skills.json")
+    setSkills(skills)
+  }
+
+  // Load skills when the component is mounted
+  useEffect(() => {
+    loadSkills().then()
+  }, [])
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
@@ -65,7 +88,8 @@ export default function Home() {
               </div>
             </div>
             <div className="flex flex-col justify-center space-y-4">
-              <h3 className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-gray-900 dark:text-gray-200 text-center">
+              <h3
+                className="text-2xl font-bold tracking-tighter sm:text-3xl md:text-4xl text-gray-900 dark:text-gray-200 text-center">
                 Find me on
               </h3>
               <div className="flex justify-center space-x-4">
@@ -89,7 +113,7 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            </div>
+          </div>
         </section>
 
         {/* About */}
@@ -123,6 +147,36 @@ export default function Home() {
                 src="/illustrations/cloud-storage-blue.svg"
                 width="550"
               />
+            </div>
+          </div>
+        </section>
+
+        {/* Skills */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="skills">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-100">
+                  Skills
+                </h2>
+                <p
+                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  My technical skills and areas of expertise.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                  {skills.map((skill: {name: string, icon: string}, index) => {
+                    return (
+                      <Skill key={index} name={skill.name} icon={skill.icon} />
+                    )
+                  })}
+                </div>
+
+              </div>
             </div>
           </div>
         </section>

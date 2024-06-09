@@ -1,0 +1,70 @@
+[
+  {
+    "name": "Vue.js",
+    "icon": "/icons/vuejs.gif"
+  },
+  {
+    "name": "React",
+    "icon": "/icons/react.gif"
+  },
+  {
+    "name": "Laravel",
+    "icon": "/icons/laravel.png"
+  },
+  {
+    "name": "Node.js",
+    "icon": "/icons/nodejs.png"
+  },
+  {
+    "name": "Java",
+    "icon": "/icons/java.png"
+  },
+  {
+    "name": "Git",
+    "icon": "/icons/git.png"
+  },
+  {
+    "name": "Docker",
+    "icon": "/icons/docker.png"
+  },
+  {
+    "name": "Spring Boot",
+    "icon": "/icons/spring-boot.png"
+  },
+  {
+    "name": "Rest API",
+    "icon": "/icons/rest-api.png"
+  },
+  {
+    "name": "Jakarta EE",
+    "icon": "/icons/jakarta-ee.png"
+  },
+  {
+    "name": "Oracle",
+    "icon": "/icons/oracle.png"
+  },
+  {
+    "name": "MySQL",
+    "icon": "/icons/mysql.png"
+  },
+  {
+    "name": "SQL",
+    "icon": "/icons/sql.png"
+  },
+  {
+    "name": "PHP",
+    "icon": "/icons/php.png"
+  },
+  {
+    "name": "UML",
+    "icon": "/icons/uml.png"
+  },
+  {
+    "name": "C++",
+    "icon": "/icons/cpp.png"
+  },
+  {
+    "name": "C",
+    "icon": "/icons/c.png"
+  }
+]
