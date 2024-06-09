@@ -10,6 +10,17 @@
   --font-prata: 'Prata', serif;
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: #9494a3;
+  border-radius: 35px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
