@@ -1,0 +1,85 @@
+[
+ {
+    "title": "Busway Ticket Chatbot",
+    "excerpt": "Innovative web app for seamless busway ticket reservations, using Neo4j to manage complex data relationships.",
+    "description": "The Busway Ticket ChatBot is an innovative web application created during the Object Technology/IoT Workshop. It's designed to streamline the busway ticket reservation process, leveraging the power of Neo4j to manage complex data relationships. This project aims to provide users with a seamless and intuitive ticket booking experience.",
+    "image": "/projects/busway-ticket-chatbot.png",
+    "category": "web",
+    "tags": ["Spring Boot", "Thymeleaf", "Neo4j", "AIML"],
+    "github": "https://github.com/ismailza/Busway-TicketChatBot"
+  },
+  {
+    "title": "Centralization and Classification of New York City Traffic",
+    "excerpt": "Web portal for analyzing and visualizing traffic centrality in NYC, developed during Object/IoT Technologies workshop.",
+    "description": "Developed as part of the Object/IoT Technologies workshop, web portal crafted to analyze and visualize traffic centrality within the bustling urban landscape of New York City.",
+    "image": "/projects/traffic-centrality.png",
+    "category": "web",
+    "tags": ["React.js", "Leaflet", "AGNES"],
+    "github": "https://github.com/ismailza/Traffic-Centrality"
+  },
+  {
+    "title": "ZStore",
+    "excerpt": "Dynamic ecommerce web app with JEE, MVC, Hibernate, and MySQL for seamless online shopping experiences.",
+    "description": "ZStore is a dynamic ecommerce web application that employs JEE technologies and adheres to the MVC architecture. This application is designed to facilitate seamless online shopping experiences, backed by a MySQL database that safely manages product and user data. As a key developer in this project, I spearheaded the integration of Hibernate for object-relational mapping and contributed significantly to developing the front-end using JSP, enhancing user interactions and overall site responsiveness.",
+    "image": "/placeholder.svg",
+    "category": "web",
+    "tags": ["Jakarta EE", "JSP", "MVC", "Hibernate", "MySQL"],
+    "github": "https://github.com/ismailza/ZStore"
+  },
+  {
+    "title": "Sudoku",
+    "excerpt": "Desktop game developed using a backtracking algorithm to generate and solve Sudoku puzzles.",
+    "description": "The game is developed using a backtracking algorithm to generate and solve the Sudoku puzzles. The algorithm works by filling in the grid with numbers from 1 to the grid size (9 for a standard 9x9 Sudoku grid) aleatorily. If the number is valid, it moves on to the next cell. If the number is not valid, it tries the next number. If no number is valid, it backtracks to the previous cell and tries a different number. This process is repeated until the grid is filled.",
+    "image": "/projects/sudoku.png",
+    "category": "desktop, game",
+    "tags": ["iot", "automation", "connectivity"],
+    "github": "https://github.com/ismailza/Sudoku"
+  },
+  {
+    "title": "JI2A . Payroll Management Platform",
+    "excerpt": "Full-stack web app for managing organizational payroll processes with PHP, Bootstrap and MySQL.",
+    "description": "Developed full-stack web applications for managing payroll processes within an organization.",
+    "image": "/projects/ji2a.png",
+    "category": "web",
+    "tags": ["PHP", "Bootstrap", "Ajax", "MySQL"],
+    "github": "https://github.com/ismailza/Gestion_Paie"
+  },
+  {
+    "title": "Checkers Game",
+    "excerpt": "Desktop Checkers game developed with C and GTK+ for a rich graphical user experience.",
+    "description": "Developed desktop game \"Checkers\" using C programming language and GTK graphical user interface.",
+    "image": "/placeholder.svg?height=200&width=300",
+    "category": "desktop, game",
+    "tags": ["C", "GTK+", "Algorithms", "Data Structures"]
+  },
+  {
+    "title": "Tic-Tac-Toe Game",
+    "excerpt": "Tic-Tac-Toe game developed with HTML, CSS, and JavaScript for two-player fun and vs. AI.",
+    "description": "Developed a web-based Tic-Tac-Toe game using HTML, CSS, and JavaScript for two-player fun and vs. AI.",
+    "image": "/projects/tic-tac-toe.png",
+    "category": "web, game",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/ismailza/Tic-Tac-Toe",
+    "demo": "https://ismailza.github.io/Tic-Tac-Toe/"
+  },
+  {
+    "title": "Js To-Do List",
+    "excerpt": "Simple to-do list web app developed with HTML, CSS, and JavaScript for managing tasks.",
+    "description": "Developed a simple to-do list web application using HTML, CSS, and JavaScript to manage tasks.",
+    "image": "/projects/js-todo-list.png",
+    "category": "web",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/ismailza/Js-ToDo-List",
+    "demo": "https://ismailza.github.io/Js-ToDo-List/"
+  },
+  {
+    "title": "Js Simple Calculator",
+    "excerpt": "Simple calculator web app developed with HTML, CSS, and JavaScript for basic arithmetic operations.",
+    "description": "Developed a simple calculator web application using HTML, CSS, and JavaScript to perform basic arithmetic operations.",
+    "image": "/projects/js-calculator.png",
+    "category": "web",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/ismailza/Simple-Js-Calculator",
+    "demo": "https://ismailza.github.io/Simple-Js-Calculator/"
+  }
+]
