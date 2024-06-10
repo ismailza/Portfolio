@@ -5,6 +5,8 @@ import Link from "next/link";
 import Skill from "@/components/skill";
 import {useEffect, useState} from "react";
 import Project from "@/components/project";
+import Education from "@/components/education";
+import Experience from "@/components/experience";
 
 export default function Home() {
 
@@ -28,6 +30,8 @@ export default function Home() {
 
   const [skills, setSkills] = useState([])
   const [projects, setProjects] = useState([])
+  const [experiences, setExperiences] = useState([])
+  const [educations, setEducations] = useState([])
 
   /**
    * Load skills from the skills.json file
@@ -45,10 +49,28 @@ export default function Home() {
     setProjects(projects)
   }
 
+  /**
+   * Load experiences from the experiences.json file
+   */
+  const loadExperiences = async () => {
+    const experiences = await require("./data/experiences.json")
+    setExperiences(experiences)
+  }
+
+  /**
+   * Load educations from the educations.json file
+   */
+  const loadEducations = async () => {
+    const educations = await require("./data/educations.json")
+    setEducations(educations)
+  }
+
   // Load skills when the component is mounted
   useEffect(() => {
     loadSkills().then()
     loadProjects().then()
+    loadExperiences().then()
+    loadEducations().then()
   }, [])
 
   return (
@@ -211,6 +233,75 @@ export default function Home() {
               {projects.map((project: {title: string, excerpt: string, image: string, tags: []}, index) => (
                 <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image} tags={project.tags} />
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Experiences */}
+        <section className="w-full py-12 md:py-24 lg:py-24" id="experiences">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-100">
+                  Experiences
+                </h2>
+                <p
+                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  My professional journey and work experiences.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="grid gap-8">
+                  {experiences.map((experience: {title: string, company: string, location: string, startedAt: string, endedAt: string, type: string, skills: [], description: string}, index) => (
+                    <Experience key={index} title={experience.title} company={experience.company} location={experience.location}
+                                startedAt={experience.startedAt} endedAt={experience.endedAt} type={experience.type}
+                                skills={experience.skills}>
+                      {experience.description}
+                    </Experience>
+                  ))}
+                </div>
+              </div>
+              {/*<img*/}
+              {/*  alt="Jane Doe"*/}
+              {/*  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"*/}
+              {/*  height="310"*/}
+              {/*  src="/placeholder.svg"*/}
+              {/*  width="550"*/}
+              {/*/>*/}
+            </div>
+          </div>
+        </section>
+
+        {/* Education */}
+        <section className="w-full py-12 md:py-24 lg:py-24" id="education">
+          <div className="container px-4 md:px-6">
+            <div className="flex flex-col items-center justify-center space-y-4 text-center">
+              <div className="space-y-2">
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-gray-900 dark:text-gray-100">
+                  Education
+                </h2>
+                <p
+                  className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                  My academic background and qualifications.
+                </p>
+              </div>
+            </div>
+            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
+              <div className="flex flex-col justify-center space-y-4">
+                <div className="grid gap-8">
+                  {educations.map((education: {title: string, type: string, university: string, city: string, startedAt: string, endedAt: string}, index) => (
+                    <Education key={index} title={education.title} type={education.type} university={education.university}
+                               city={education.city} startedAt={education.startedAt} endedAt={education.endedAt}/>
+                  ))}
+                </div>
+              </div>
+              <img
+                alt="Ismail ZAHIR"
+                className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"
+                src="/illustrations/illustration-education-concept.png"
+              />
             </div>
           </div>
         </section>

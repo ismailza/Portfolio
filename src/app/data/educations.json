@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Software Engineering and Computer Systems Integration",
+    "type": "Engineering cycle",
+    "university": "Faculty of Sciences and Technologies",
+    "city": "Mohammedia",
+    "startedAt": "2022",
+    "endedAt": "2025"
+  },
+  {
+    "title": "Software Engineering",
+    "type": "Software Engineer Certification",
+    "university": "ALX",
+    "city": "Online",
+    "startedAt": "2023",
+    "endedAt": "2024"
+  },
+  {
+    "title": "Software Engineering",
+    "type": "Bachelor of Sciences and Techniques",
+    "university": "Faculty of Sciences and Technologies",
+    "city": "Errachidia",
+    "startedAt": "2021",
+    "endedAt": "2022"
+  },
+  {
+    "title": "Mathematics, Physics and Computer Science",
+    "type": "Diploma of University Studies in Science and Techniques",
+    "university": "Faculty of Sciences and Technologies",
+    "city": "Errachidia",
+    "startedAt": "2019",
+    "endedAt": "2021"
+  },
+  {
+    "title": "Mathematics Science A, French option",
+    "type": "Baccalaureate in Mathematics Sciences",
+    "university": "Hassa II High School",
+    "city": "Tinejdad",
+    "startedAt": "2018",
+    "endedAt": "2019"
+  }
+]
