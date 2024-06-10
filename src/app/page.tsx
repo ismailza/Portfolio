@@ -26,7 +26,7 @@ export default function Home() {
    * Download the resume file
    */
   const downloadResume = () => {
-    window.open("/resume.pdf", "_blank")
+    window.open("https://drive.google.com/file/d/1L2SHgV1EQXCQPu1oXEy_Vm50QAEucas0/view?usp=drive_link", "_blank")
   }
 
   const [skills, setSkills] = useState([])
