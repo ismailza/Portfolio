@@ -7,6 +7,7 @@ import {useEffect, useState} from "react";
 import Project from "@/components/project";
 import Education from "@/components/education";
 import Experience from "@/components/experience";
+import Contact from "@/components/contact";
 
 export default function Home() {
 
@@ -305,6 +306,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Contact */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
+          <Contact />
+        </section>
+
       </main>
       <Footer/>
     </div>
