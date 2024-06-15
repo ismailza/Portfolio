@@ -1,84 +1,320 @@
 [
  {
     "title": "Busway Ticket Chatbot",
+    "slug": "busway-ticket-chatbot",
     "excerpt": "Innovative web app for seamless busway ticket reservations, using Neo4j to manage complex data relationships.",
-    "description": "The Busway Ticket ChatBot is an innovative web application created during the Object Technology/IoT Workshop. It's designed to streamline the busway ticket reservation process, leveraging the power of Neo4j to manage complex data relationships. This project aims to provide users with a seamless and intuitive ticket booking experience.",
+    "overview": "The Busway Ticket ChatBot is an innovative web application created during the Object Technology/IoT Workshop. It's designed to streamline the busway ticket reservation process, leveraging the power of Neo4j to manage complex data relationships. This project aims to provide users with a seamless and intuitive ticket booking experience.",
     "image": "/projects/busway-ticket-chatbot.png",
-    "category": "web",
+    "category": "Web Application",
+    "timeline": {
+      "start": "Feb 2024",
+      "end": "Mar 2024"
+    },
+    "featured": true,
+    "technologies": ["Spring Boot", "Thymeleaf", "Neo4j", "AIML", "Docker"],
+    "features": [
+      "Trip Visualization: Users can view available trips and detailed information about bus routes, including departure and arrival times.",
+      "Online Reservation: Allows users to book tickets online, providing a hassle-free reservation experience.",
+      "Dynamic Data Management: Utilizes Neo4j for sophisticated management of buses, drivers and stations.",
+      "User-Friendly Interface: Designed with the end-user in mind, ensuring easy navigation and interaction.",
+      "Chatbot: Provides a conversational interface for users to interact with the system, making ticket booking more engaging."
+    ],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      },
+      {
+        "name": "Oumaima OUASLI",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/oumaima-ouasli/",
+        "github": "https://www.github.com/oumaima2002"
+      }
+    ],
     "tags": ["Spring Boot", "Thymeleaf", "Neo4j", "AIML"],
     "github": "https://github.com/ismailza/Busway-TicketChatBot"
   },
   {
     "title": "Centralization and Classification of New York City Traffic",
+    "slug": "centralization-and-classification-of-new-york-city-traffic",
     "excerpt": "Web portal for analyzing and visualizing traffic centrality in NYC, developed during Object/IoT Technologies workshop.",
-    "description": "Developed as part of the Object/IoT Technologies workshop, web portal crafted to analyze and visualize traffic centrality within the bustling urban landscape of New York City.",
+    "overview": "Developed as part of the Object/IoT Technologies workshop, web portal crafted to analyze and visualize traffic centrality within the bustling urban landscape of New York City.",
     "image": "/projects/traffic-centrality.png",
-    "category": "web",
+    "category": "Web Portal",
+    "timeline": {
+      "start": "Feb 2024",
+      "end": "Mar 2024"
+    },
+    "featured": true,
+    "technologies": ["React.js", "Leaflet", "React-Leaflet", "Bootstrap", "JSON", "Python", "AGNES", "Docker"],
+    "features": [
+      "Dynamic map visualization with zoom and pan functionalities.",
+      "Filterable data based on year, month, day, and time slots.",
+      "Color-coded clusters to represent different traffic flows.",
+      "Detailed information on traffic flow accessible via map markers.",
+      "Responsive design for optimal viewing on desktop and mobile devices.",
+      "Multi-language support for a global audience."
+    ],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      },
+      {
+        "name": "Khaoula ABASSI",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/khaoula-abassi/",
+        "github": "https://www.github.com/Wahya1"
+      },
+      {
+        "name": "Mohamed JEBBANEMA",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/mohamed-jebbanema/",
+        "github": "https://www.github.com/medjebb"
+      },
+      {
+        "name": "El Mehdi Salah BEN SOUDA",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/el-mehdi-salah-ben-souda/",
+        "github": "https://www.github.com/Mehdi-Ben-Souda"
+      }
+    ],
     "tags": ["React.js", "Leaflet", "AGNES"],
     "github": "https://github.com/ismailza/Traffic-Centrality"
   },
   {
     "title": "ZStore",
+    "slug": "zstore",
     "excerpt": "Dynamic ecommerce web app with JEE, MVC, Hibernate, and MySQL for seamless online shopping experiences.",
-    "description": "ZStore is a dynamic ecommerce web application that employs JEE technologies and adheres to the MVC architecture. This application is designed to facilitate seamless online shopping experiences, backed by a MySQL database that safely manages product and user data. As a key developer in this project, I spearheaded the integration of Hibernate for object-relational mapping and contributed significantly to developing the front-end using JSP, enhancing user interactions and overall site responsiveness.",
+    "overview": "ZStore is a dynamic ecommerce web application that employs JEE technologies and adheres to the MVC architecture. This application is designed to facilitate seamless online shopping experiences, backed by a MySQL database that safely manages product and user data. As a key developer in this project, I spearheaded the integration of Hibernate for object-relational mapping and contributed significantly to developing the front-end using JSP, enhancing user interactions and overall site responsiveness.",
     "image": "/placeholder.svg",
-    "category": "web",
-    "tags": ["Jakarta EE", "JSP", "MVC", "Hibernate", "MySQL"],
+    "category": "Web Application",
+    "timeline": {
+      "start": "Mar 2024",
+      "end": "Mar 2024"
+    },
+    "features": [
+      "User-friendly interface for easy navigation and product search.",
+      "Dynamic product catalog with detailed descriptions and images.",
+      "Shopping cart functionality for adding and managing products.",
+      "Backend administration panel for managing products, orders, and users."
+    ],
+    "featured": true,
+    "technologies": ["Jakarta EE", "JSP", "MVC", "Hibernate", "MySQL"],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      }
+    ],
+    "tags": ["JEE", "JSP", "MVC", "Hibernate", "MySQL"],
     "github": "https://github.com/ismailza/ZStore"
   },
   {
     "title": "Sudoku",
+    "slug": "sudoku",
     "excerpt": "Desktop game developed using a backtracking algorithm to generate and solve Sudoku puzzles.",
-    "description": "The game is developed using a backtracking algorithm to generate and solve the Sudoku puzzles. The algorithm works by filling in the grid with numbers from 1 to the grid size (9 for a standard 9x9 Sudoku grid) aleatorily. If the number is valid, it moves on to the next cell. If the number is not valid, it tries the next number. If no number is valid, it backtracks to the previous cell and tries a different number. This process is repeated until the grid is filled.",
+    "overview": "The game is developed using a backtracking algorithm to generate and solve the Sudoku puzzles. The algorithm works by filling in the grid with numbers from 1 to the grid size (9 for a standard 9x9 Sudoku grid) aleatorily. If the number is valid, it moves on to the next cell. If the number is not valid, it tries the next number. If no number is valid, it backtracks to the previous cell and tries a different number. This process is repeated until the grid is filled.",
     "image": "/projects/sudoku.png",
-    "category": "desktop, game",
-    "tags": ["iot", "automation", "connectivity"],
-    "github": "https://github.com/ismailza/Sudoku"
+    "category": "Desktop Game",
+    "timeline": {
+      "start": "Jan 2024",
+      "end": "Jan 2024"
+    },
+    "featured": true,
+    "technologies": ["C++", "SFML"],
+    "features": [
+      "Classic Sudoku gameplay with a clean, intuitive interface.",
+      "Multiple difficulty levels to challenge both beginners and seasoned players.",
+      "Enhanced audio effects for an immersive experience."
+    ],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      }
+    ],
+    "tags": ["cpp", "sfml", "game"],
+    "github": "https://github.com/ismailza/Sudoku",
+    "release": "https://github.com/ismailza/Sudoku/releases/latest"
   },
   {
     "title": "JI2A . Payroll Management Platform",
+    "slug": "ji2a-payroll-management-platform",
     "excerpt": "Full-stack web app for managing organizational payroll processes with PHP, Bootstrap and MySQL.",
-    "description": "Developed full-stack web applications for managing payroll processes within an organization.",
+    "overview": "Developed full-stack web applications for managing payroll processes within an organization.",
     "image": "/projects/ji2a.png",
-    "category": "web",
+    "category": "Web Application",
+    "timeline": {
+      "start": "May 2023",
+      "end": "Jun 2023"
+    },
+    "featured": true,
+    "features": [
+      "User authentication and authorization for secure access.",
+      "Employee management with detailed profiles and salary information.",
+      "Payroll processing with automated calculations and tax deductions."
+    ],
+    "technologies": ["PHP", "Bootstrap", "Ajax", "MySQL"],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      },
+      {
+        "name": "JalalEddine OUTGOUGA",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/jeout/",
+        "github": "https://www.github.com/JeddineO"
+      },
+      {
+        "name": "Abdelmajid ZADDI",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/abdelmajid-zaddi-694b2b290/",
+        "github": "https://www.github.com/LHW001abc"
+      },
+      {
+        "name": "Abdelaziz AFRIAD",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "github": "https://www.github.com/afrivd"
+      }
+    ],
     "tags": ["PHP", "Bootstrap", "Ajax", "MySQL"],
     "github": "https://github.com/ismailza/Gestion_Paie"
   },
   {
     "title": "Checkers Game",
+    "slug": "checkers-game",
     "excerpt": "Desktop Checkers game developed with C and GTK+ for a rich graphical user experience.",
-    "description": "Developed desktop game \"Checkers\" using C programming language and GTK graphical user interface.",
+    "overview": "Developed desktop game \"Checkers\" using C programming language and GTK graphical user interface.",
     "image": "/placeholder.svg?height=200&width=300",
-    "category": "desktop, game",
+    "category": "Desktop Game",
+    "timeline": {
+      "start": "Mar 2023",
+      "end": "May 2023"
+    },
+    "features": [
+      "Classic Checkers gameplay with a rich graphical user interface.",
+      "Single-player mode against AI for challenging gameplay.",
+      "Two-player mode for competitive fun.",
+      "AI with varying difficulty levels to suit all players.",
+      "AI vs AI mode for automated gameplay."
+    ],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      },
+      {
+        "name": "Yasser TRIDOU",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/tridou-yasser/",
+        "github": "https://www.github.com/yasser-TRIDOU"
+      }
+    ],
+    "technologies": ["C Programming", "GTK+"],
     "tags": ["C", "GTK+", "Algorithms", "Data Structures"]
   },
   {
     "title": "Tic-Tac-Toe Game",
+    "slug": "tic-tac-toe-game",
     "excerpt": "Tic-Tac-Toe game developed with HTML, CSS, and JavaScript for two-player fun and vs. AI.",
-    "description": "Developed a web-based Tic-Tac-Toe game using HTML, CSS, and JavaScript for two-player fun and vs. AI.",
+    "overview": "Developed a web-based Tic-Tac-Toe game using HTML, CSS, and JavaScript for two-player fun and vs. AI.",
     "image": "/projects/tic-tac-toe.png",
-    "category": "web, game",
+    "category": "Web Game",
+    "timeline": {
+      "start": "Sep 2023",
+      "end": "Sep 2023"
+    },
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "features": [
+      "Classic Tic-Tac-Toe gameplay with a clean, intuitive interface.",
+      "Single-player mode against AI for challenging gameplay.",
+      "Two-player mode for competitive fun.",
+      "AI with varying difficulty levels to suit all players.",
+      "Save and load game functionality for resuming play at any time."
+    ],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      }
+    ],
     "tags": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/ismailza/Tic-Tac-Toe",
     "demo": "https://ismailza.github.io/Tic-Tac-Toe/"
   },
   {
     "title": "Js To-Do List",
+    "slug": "js-to-do-list",
     "excerpt": "Simple to-do list web app developed with HTML, CSS, and JavaScript for managing tasks.",
-    "description": "Developed a simple to-do list web application using HTML, CSS, and JavaScript to manage tasks.",
+    "overview": "Developed a simple to-do list web application using HTML, CSS, and JavaScript to manage tasks.",
     "image": "/projects/js-todo-list.png",
-    "category": "web",
+    "category": "Web Application",
+    "timeline": {
+      "start": "Jul 2023",
+      "end": "Jul 2023"
+    },
+    "features": [
+      "Add, edit, and delete tasks for efficient task management.",
+      "Mark tasks as complete to track progress.",
+      "Responsive design for optimal viewing on desktop and mobile devices.",
+      "Dark mode for reduced eye strain during night-time use."
+    ],
+    "technologies": ["HTML", "CSS", "JavaScript"],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      }
+    ],
     "tags": ["HTML", "CSS", "JavaScript"],
     "github": "https://github.com/ismailza/Js-ToDo-List",
     "demo": "https://ismailza.github.io/Js-ToDo-List/"
   },
   {
     "title": "Js Simple Calculator",
+    "slug": "js-simple-calculator",
     "excerpt": "Simple calculator web app developed with HTML, CSS, and JavaScript for basic arithmetic operations.",
-    "description": "Developed a simple calculator web application using HTML, CSS, and JavaScript to perform basic arithmetic operations.",
+    "overview": "Developed a simple calculator web application using HTML, CSS, and JavaScript to perform basic arithmetic operations.",
     "image": "/projects/js-calculator.png",
-    "category": "web",
+    "category": "Web Application",
+    "timeline": {
+      "start": "Jul 2023",
+      "end": "Jul 2023"
+    },
+    "features": [
+      "Basic arithmetic operations: addition, subtraction, multiplication, and division.",
+      "Clear and delete functionality for correcting input errors.",
+      "Responsive design for optimal viewing on desktop and mobile devices.",
+      "Dark mode for reduced eye strain during night-time use."
+    ],
+    "technologies": ["HTML", "CSS", "JavaScript"],
     "tags": ["HTML", "CSS", "JavaScript"],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Mohammedia - UH2C",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      }
+    ],
     "github": "https://github.com/ismailza/Simple-Js-Calculator",
     "demo": "https://ismailza.github.io/Simple-Js-Calculator/"
   }
