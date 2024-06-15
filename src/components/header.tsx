@@ -1,11 +1,10 @@
+"use client";
 import Link from "next/link";
 import React, { useState } from "react";
+import scrollToSection from "@/lib/utils-functions";
 
-interface HeaderProps {
-  scrollToSection: (section: string) => void;
-}
+const Header = () => {
 
-const Header: React.FC<HeaderProps> = ({ scrollToSection }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
