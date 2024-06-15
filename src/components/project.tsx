@@ -1,24 +1,23 @@
 import Link from "next/link";
 import {Card, CardContent, CardDescription, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
-import { Key } from "react";
 
-interface ProjectProps {
-  key: Key;
+interface CardProjectProps {
   title: string;
+  slug: string;
   excerpt: string;
   image: string;
   tags: string[];
 }
 
-const Project = ({ key, title, excerpt, image, tags }: ProjectProps) => {
+const Project = ({ title, excerpt, image, tags, slug }: CardProjectProps) => {
 
   return (
     <Card
-      key={key}
+      key={slug}
       className="w-full max-w-sm rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow"
     >
-      <Link href="#" prefetch={false}>
+      <Link href={`/projects/${slug}`} prefetch={false}>
         <img
           src={image}
           alt={title}
