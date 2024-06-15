@@ -1,6 +1,4 @@
 'use client';
-import Header from "@/components/header";
-import Footer from "@/components/footer";
 import Link from "next/link";
 import Skill from "@/components/skill";
 import {useEffect, useState} from "react";
@@ -8,19 +6,10 @@ import Project from "@/components/project";
 import Education from "@/components/education";
 import Experience from "@/components/experience";
 import Contact from "@/components/contact";
+import scrollToSection from "@/lib/utils-functions";
+import {ProjectProps} from "@/lib/project-data";
 
 export default function Home() {
-
-  /**
-   * Scroll to a section by its id
-   * @param id - The id of the section to scroll to
-   */
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id)
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   /**
    * Download the resume file
@@ -35,48 +24,34 @@ export default function Home() {
   const [educations, setEducations] = useState([])
 
   /**
-   * Load skills from the skills.json file
+   * Load all data when the component is mounted
    */
-  const loadSkills = async () => {
-    const skills = await require("./data/skills.json")
-    setSkills(skills)
-  }
-
-  /**
-   * Load projects from the projects.json file
-   */
-  const loadProjects = async () => {
-    const projects = await require("./data/projects.json")
-    setProjects(projects)
-  }
-
-  /**
-   * Load experiences from the experiences.json file
-   */
-  const loadExperiences = async () => {
-    const experiences = await require("./data/experiences.json")
-    setExperiences(experiences)
-  }
-
-  /**
-   * Load educations from the educations.json file
-   */
-  const loadEducations = async () => {
-    const educations = await require("./data/educations.json")
-    setEducations(educations)
+  const loadData = async () => {
+    try {
+      // Load skills
+      const skills = await require("./data/skills.json")
+      setSkills(skills)
+      // Load projects
+      const projects = await require("./data/projects.json")
+      setProjects(projects.filter((project: { featured: boolean; }) => project.featured))
+      // Load experiences
+      const experiences = await require("./data/experiences.json")
+      setExperiences(experiences)
+      // Load educations
+      const educations = await require("./data/educations.json")
+      setEducations(educations)
+    } catch (error) {
+      console.log("Error loading data...! ", error)
+    }
   }
 
   // Load skills when the component is mounted
   useEffect(() => {
-    loadSkills().then()
-    loadProjects().then()
-    loadExperiences().then()
-    loadEducations().then()
+    loadData().then();
   }, [])
 
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <Header scrollToSection={scrollToSection}/>
       <main className="flex-1 bg-white dark:bg-gray-900">
         {/* Hero */}
         <section className="w-full pt-12 md:pt-24 lg:pt-32">
@@ -232,10 +207,15 @@ export default function Home() {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-2">
-              {projects.map((project: { title: string, excerpt: string, image: string, tags: [] }, index) => (
-                <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image} tags={project.tags} />
+              {projects.map((project: ProjectProps , index) => (
+                <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image} tags={project.tags} slug={project.slug} />
               ))}
             </div>
+          <div className="flex justify-end mt-8">
+            <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
+              View All Projects &rarr;
+            </Link>
+          </div>
           </div>
         </section>
 
@@ -265,13 +245,6 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              {/*<img*/}
-              {/*  alt="Jane Doe"*/}
-              {/*  className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center sm:w-full lg:order-last"*/}
-              {/*  height="310"*/}
-              {/*  src="/placeholder.svg"*/}
-              {/*  width="550"*/}
-              {/*/>*/}
             </div>
           </div>
         </section>
@@ -314,7 +287,6 @@ export default function Home() {
         </section>
 
       </main>
-      <Footer/>
     </div>
   );
 }
