@@ -178,15 +178,21 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
-                  {skills.map((skill: { name: string, icon: string }, index) => {
-                    return (
-                      <Skill key={index} name={skill.name} icon={skill.icon}/>
-                    )
-                  })}
-                </div>
-
+                {!skills || skills.length === 0 ? (
+                  <img
+                    src={'/loader.svg'}
+                    alt={"loading"}
+                    className={"mx-auto"}
+                  />
+                ) : (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+                    {skills.map((skill: { name: string, icon: string }, index) => {
+                      return (
+                        <Skill key={index} name={skill.name} icon={skill.icon}/>
+                      )
+                    })}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -206,13 +212,23 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-2">
-              {projects.map((project: ProjectProps , index) => (
-                <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image} tags={project.tags} slug={project.slug} />
-              ))}
-            </div>
-          <div className="flex justify-end mt-8">
-            <Link href="/projects" className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
+            {!projects || projects.length === 0 ? (
+              <img
+                src={'/loader.svg'}
+                alt={"loading"}
+                className={"mx-auto"}
+              />
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-2">
+                {projects.map((project: ProjectProps, index) => (
+                  <Project key={index} title={project.title} excerpt={project.excerpt} image={project.image}
+                           tags={project.tags} slug={project.slug}/>
+                ))}
+              </div>
+            )}
+            <div className="flex justify-end mt-8">
+              <Link href="/projects"
+                    className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
               View All Projects &rarr;
             </Link>
           </div>
@@ -235,15 +251,33 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="grid gap-8">
-                  {experiences.map((experience: {title: string, company: string, location: string, startedAt: string, endedAt: string, type: string, skills: [], description: string}, index) => (
-                    <Experience key={index} title={experience.title} company={experience.company} location={experience.location}
-                                startedAt={experience.startedAt} endedAt={experience.endedAt} type={experience.type}
-                                skills={experience.skills}>
-                      {experience.description}
-                    </Experience>
-                  ))}
-                </div>
+                {!experiences || experiences.length === 0 ? (
+                  <img
+                    src={'/loader.svg'}
+                    alt={"loading"}
+                    className={"mx-auto"}
+                  />
+                ) : (
+                  <div className="grid gap-8">
+                    {experiences.map((experience: {
+                      title: string,
+                      company: string,
+                      location: string,
+                      startedAt: string,
+                      endedAt: string,
+                      type: string,
+                      skills: [],
+                      description: string
+                    }, index) => (
+                      <Experience key={index} title={experience.title} company={experience.company}
+                                  location={experience.location}
+                                  startedAt={experience.startedAt} endedAt={experience.endedAt} type={experience.type}
+                                  skills={experience.skills}>
+                        {experience.description}
+                      </Experience>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -265,12 +299,28 @@ export default function Home() {
             </div>
             <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-2 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
-                <div className="grid gap-8">
-                  {educations.map((education: {title: string, type: string, university: string, city: string, startedAt: string, endedAt: string}, index) => (
-                    <Education key={index} title={education.title} type={education.type} university={education.university}
-                               city={education.city} startedAt={education.startedAt} endedAt={education.endedAt}/>
-                  ))}
-                </div>
+                {!educations || educations.length === 0 ? (
+                  <img
+                    src={'/loader.svg'}
+                    alt={"loading"}
+                    className={"mx-auto"}
+                  />
+                ) : (
+                  <div className="grid gap-8">
+                    {educations.map((education: {
+                      title: string,
+                      type: string,
+                      university: string,
+                      city: string,
+                      startedAt: string,
+                      endedAt: string
+                    }, index) => (
+                      <Education key={index} title={education.title} type={education.type}
+                                 university={education.university}
+                                 city={education.city} startedAt={education.startedAt} endedAt={education.endedAt}/>
+                    ))}
+                  </div>
+                )}
               </div>
               <img
                 alt="Ismail ZAHIR"
