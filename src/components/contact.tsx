@@ -65,19 +65,23 @@ const Contact = () => {
             <div className="flex items-center gap-3">
               <MapPinIcon className="h-6 w-6 text-gray-500 dark:text-gray-400"/>
               <p
-                className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">Sale,
-                Rabat-Sale-Kenitra, Morocco</p>
+                className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">
+                Sale, Rabat-Sale-Kenitra, Morocco
+              </p>
             </div>
             <div className="flex items-center gap-3">
               <PhoneIcon className="h-6 w-6 text-gray-500 dark:text-gray-400"/>
               <a href="tel:212635791476"
-                 className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">(+212)
-                635-791476</a>
+                 className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">
+                +212 635-791476
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <MailIcon className="h-6 w-6 text-gray-500 dark:text-gray-400"/>
               <a href="mailto:ismailza407@gmail.com"
-                 className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">ismailza407@gmail.com</a>
+                 className="text-sm text-gray-500  hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600">
+                ismailza407@gmail.com
+              </a>
             </div>
             <div className="flex items-center gap-3">
               <div className="flex justify-center space-x-2">
