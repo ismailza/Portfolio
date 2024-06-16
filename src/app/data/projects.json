@@ -317,5 +317,47 @@
     ],
     "github": "https://github.com/ismailza/Simple-Js-Calculator",
     "demo": "https://ismailza.github.io/Simple-Js-Calculator/"
+  },
+  {
+    "title": "Drâa Tafilalet Travel",
+    "slug": "draa-tafilalet-travel",
+    "excerpt": "Travel agency website developed with HTML, CSS, and JavaScript for showcasing tours and services.",
+    "overview": "Developed a travel agency website using HTML, CSS, and JavaScript to showcase tours and services offered by the agency.",
+    "image": "/projects/draa-tafilalet-travel.png",
+    "category": "Web Application",
+    "timeline": {
+      "start": "May 2022",
+      "end": "Jun 2022"
+    },
+    "features": [
+      "Interactive map with tour locations and details.",
+      "Hotel and tour packages with pricing and booking options.",
+      "Restaurant and activity recommendations for travelers.",
+      "Transportation services for easy travel arrangements."
+      "Contact form for inquiries and bookings.",
+      "Responsive design for optimal viewing on desktop and mobile devices."
+    ],
+    "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap", "JQuery", "Google Maps API", "AJAX"],
+    "team": [
+      {
+        "name": "Ismail ZAHIR",
+        "role": "Software Engineering Student at FST Errachidia - UMI",
+        "linkedin": "https://www.linkedin.com/in/ismailzahir01/",
+        "github": "https://www.github.com/ismailza"
+      },
+      {
+        "name": "Ayoub ZITANE",
+        "role": "Software Engineering Student at FST Errachidia - UMI",
+        "linkedin": "https://www.linkedin.com/in/ayoub-zitane-a86a9429b"
+      },
+      {
+        "name": "Zakia RHIOUI",
+        "role": "Software Engineering Student at FST Errachidia - UMI",
+        "linkedin": "https://www.linkedin.com/in/zakia-rhioui-8b9280246"
+      }
+    ],
+    "featured": true,
+    "tags": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    "github": "https://github.com/ismailza/Draa-Tafilalet-Travel"
   }
 ]
