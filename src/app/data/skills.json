@@ -32,8 +32,12 @@
     "icon": "/icons/spring-boot.png"
   },
   {
-    "name": "Rest API",
-    "icon": "/icons/rest-api.png"
+    "name": "Neo4j",
+    "icon": "/icons/neo4j.png"
+  },
+  {
+    "name": "Solidity",
+    "icon": "/icons/solidity.png"
   },
   {
     "name": "Jakarta EE",
