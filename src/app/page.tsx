@@ -30,7 +30,7 @@ export default function Home() {
     try {
       // Load skills
       const skills = await require("./data/skills.json")
-      setSkills(skills)
+      setSkills((skills as any).filter((skill: { featured: boolean; }) => skill.featured))
       // Load projects
       const projects = await require("./data/projects.json")
       setProjects(projects.filter((project: { featured: boolean; }) => project.featured))
@@ -45,9 +45,19 @@ export default function Home() {
     }
   }
 
-  // Load skills when the component is mounted
   useEffect(() => {
+    // Load skills when the component is mounted
     loadData().then();
+
+    // Load LinkedIn badge
+    const script = document.createElement('script');
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, [])
 
   return (
@@ -151,19 +161,22 @@ export default function Home() {
                   {/*  */}
                 </div>
               </div>
-              <img
-                alt="Ismail ZAHIR"
-                className="mx-auto aspect-video overflow-hidden rounded-xl sm:w-full lg:order-last"
-                height="310"
-                src="/illustrations/cloud-storage-blue.svg"
-                width="550"
-              />
+              <div className="flex justify-center">
+                <div className="badge-base LI-profile-badge"
+                     data-locale="en_US"
+                     data-size="large"
+                     data-theme="dark"
+                     datatype="HORIZONTAL"
+                     data-vanity="ismailzahir01"
+                     data-version="v1">
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         {/* Skills */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="skills">
+        <section className="w-full py-12 md:py-24 lg:py-24 bg-gray-100 dark:bg-gray-800" id="skills">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -176,7 +189,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 pt-4 lg:grid-cols-1 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 {!skills || skills.length === 0 ? (
                   <img
@@ -229,9 +242,9 @@ export default function Home() {
             <div className="flex justify-end mt-8">
               <Link href="/projects"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
-              View All Projects &rarr;
-            </Link>
-          </div>
+                View All Projects &rarr;
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -263,6 +276,7 @@ export default function Home() {
                       title: string,
                       company: string,
                       location: string,
+                      locationType: string,
                       startedAt: string,
                       endedAt: string,
                       type: string,
@@ -270,7 +284,7 @@ export default function Home() {
                       description: string
                     }, index) => (
                       <Experience key={index} title={experience.title} company={experience.company}
-                                  location={experience.location}
+                                  location={experience.location} locationType={experience.locationType}
                                   startedAt={experience.startedAt} endedAt={experience.endedAt} type={experience.type}
                                   skills={experience.skills}>
                         {experience.description}
@@ -333,7 +347,7 @@ export default function Home() {
 
         {/* Contact */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
-          <Contact />
+          <Contact/>
         </section>
 
       </main>

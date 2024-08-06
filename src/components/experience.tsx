@@ -3,6 +3,7 @@ interface ExperienceProps {
   title: string;
   company: string;
   location: string;
+  locationType: string;
   startedAt: string;
   endedAt: string;
   skills: string[];
@@ -10,14 +11,19 @@ interface ExperienceProps {
   children?: React.ReactNode;
 }
 
-const Experience = ({ title, company, location, startedAt, endedAt, skills, type, children }: ExperienceProps) => {
+const Experience = ({ title, company, location, locationType, startedAt, endedAt, skills, type, children }: ExperienceProps) => {
   return (
     <div className="relative pl-6 after:absolute after:inset-y-0 after:w-px after:bg-gray-500/20 dark:after:bg-gray-400/20">
       <div className="grid gap-1 text-sm relative">
         <div className="aspect-square w-3 bg-gray-900 rounded-full absolute left-0 translate-x-[-29.5px] z-10 top-1 dark:bg-gray-50"/>
         <div className="font-medium">{title}</div>
         <div className="text-gray-500 dark:text-gray-300">
-          {company} {location ? `, ${location}` : ''} . {type}
+          {company ? company : ''}
+          {type && (company ? ' . ' : '') + type}
+        </div>
+        <div className="text-gray-500 dark:text-gray-300">
+          {location ? location : ''}
+          {locationType && (location ? ' . ' : '') + locationType}
         </div>
         <div className="text-gray-500 dark:text-gray-400">
           {startedAt} - {endedAt}

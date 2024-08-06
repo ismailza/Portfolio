@@ -1,74 +1,92 @@
 [
   {
     "name": "Vue.js",
-    "icon": "/icons/vuejs.gif"
+    "icon": "/icons/vuejs.gif",
+    "featured": true
   },
   {
     "name": "React",
-    "icon": "/icons/react.gif"
-  },
-  {
-    "name": "Laravel",
-    "icon": "/icons/laravel.png"
+    "icon": "/icons/react.gif",
+    "featured": true
   },
   {
     "name": "Node.js",
-    "icon": "/icons/nodejs.png"
+    "icon": "/icons/nodejs.png",
+    "featured": true
   },
   {
-    "name": "Java",
-    "icon": "/icons/java.png"
-  },
-  {
-    "name": "Git",
-    "icon": "/icons/git.png"
-  },
-  {
-    "name": "Docker",
-    "icon": "/icons/docker.png"
+    "name": "Laravel",
+    "icon": "/icons/laravel.png",
+    "featured": true
   },
   {
     "name": "Spring Boot",
-    "icon": "/icons/spring-boot.png"
+    "icon": "/icons/spring-boot.png",
+    "featured": true
+  },
+  {
+    "name": "Docker",
+    "icon": "/icons/docker.png",
+    "featured": true
+  },
+  {
+    "name": "Git",
+    "icon": "/icons/git.png",
+    "featured": true
   },
   {
     "name": "Neo4j",
-    "icon": "/icons/neo4j.png"
+    "icon": "/icons/neo4j.png",
+    "featured": true
   },
   {
     "name": "Solidity",
-    "icon": "/icons/solidity.png"
+    "icon": "/icons/solidity.png",
+    "featured": false
   },
   {
     "name": "Jakarta EE",
-    "icon": "/icons/jakarta-ee.png"
+    "icon": "/icons/jakarta-ee.png",
+    "featured": false
   },
   {
     "name": "Oracle",
-    "icon": "/icons/oracle.png"
+    "icon": "/icons/oracle.png",
+    "featured": false
   },
   {
     "name": "MySQL",
-    "icon": "/icons/mysql.png"
+    "icon": "/icons/mysql.png",
+    "featured": true
   },
   {
     "name": "SQL",
-    "icon": "/icons/sql.png"
+    "icon": "/icons/sql.png",
+    "featured": false
   },
   {
     "name": "PHP",
-    "icon": "/icons/php.png"
+    "icon": "/icons/php.png",
+    "featured": true
   },
   {
     "name": "UML",
-    "icon": "/icons/uml.png"
+    "icon": "/icons/uml.png",
+    "featured": false
   },
   {
-    "name": "C++",
-    "icon": "/icons/cpp.png"
+    "name": "Java",
+    "icon": "/icons/java.png",
+    "featured": true
+  },
+  {
+    "name": "C/C++",
+    "icon": "/icons/c-cpp.webp",
+    "featured": true
   },
   {
     "name": "C",
-    "icon": "/icons/c.png"
+    "icon": "/icons/c.png",
+    "featured": false
   }
 ]
