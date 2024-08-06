@@ -45,9 +45,19 @@ export default function Home() {
     }
   }
 
-  // Load skills when the component is mounted
   useEffect(() => {
+    // Load skills when the component is mounted
     loadData().then();
+
+    // Load LinkedIn badge
+    const script = document.createElement('script');
+    script.src = 'https://platform.linkedin.com/badges/js/profile.js';
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, [])
 
   return (
@@ -151,13 +161,16 @@ export default function Home() {
                   {/*  */}
                 </div>
               </div>
-              <img
-                alt="Ismail ZAHIR"
-                className="mx-auto aspect-video overflow-hidden rounded-xl sm:w-full lg:order-last"
-                height="310"
-                src="/illustrations/cloud-storage-blue.svg"
-                width="550"
-              />
+              <div className="flex justify-center">
+                <div className="badge-base LI-profile-badge"
+                     data-locale="en_US"
+                     data-size="large"
+                     data-theme="dark"
+                     datatype="HORIZONTAL"
+                     data-vanity="ismailzahir01"
+                     data-version="v1">
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -229,9 +242,9 @@ export default function Home() {
             <div className="flex justify-end mt-8">
               <Link href="/projects"
                     className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-6 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300">
-              View All Projects &rarr;
-            </Link>
-          </div>
+                View All Projects &rarr;
+              </Link>
+            </div>
           </div>
         </section>
 
@@ -333,7 +346,7 @@ export default function Home() {
 
         {/* Contact */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="contact">
-          <Contact />
+          <Contact/>
         </section>
 
       </main>
