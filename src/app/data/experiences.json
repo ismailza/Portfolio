@@ -1,22 +1,44 @@
 [
   {
     "title": "Full Stack Engineer",
+    "location": "Rabat, Morocco",
+    "locationType": "Remote",
+    "startedAt": "Jul 2024",
+    "endedAt": "Present",
+    "type": "Freelance",
+    "skills": ["Spring boot", "Spring Security", "JWT", "PostgreSQL", "Docker", "React", "CI/CD"]
+  },
+  {
+    "title": "Full Stack Engineer",
+    "location": "Casablanca, Morocco",
+    "locationType": "Remote",
+    "startedAt": "Jul 2024",
+    "endedAt": "Jul 2024",
+    "type": "Freelance",
+    "skills": ["Laravel", "PHPUnit", "MySQL", "Vue.js", "CI/CD"],
+    "description": "Developed a web app for sustainable agriculture, featuring an organic products marketplace and service management tools."
+  },
+  {
+    "title": "Full Stack Engineer",
     "company": "GTEL",
-    "location": "Casablanca",
+    "location": "241, Boulevard Emile Zola 5th floor Office 10 20082 Casablanca, Morocco",
+    "locationType": "Hybrid",
     "startedAt": "Apr 2024",
     "endedAt": "Jun 2024",
     "type": "Internship",
-    "skills": ["Laravel", "PHPUnit", "MySQL", "CI/CD"]
+    "skills": ["Laravel", "PHPUnit", "MySQL", "CI/CD"],
+    "description": "Developed a comprehensive training management platform for GTEL Academy, focusing on course management, user registration, and certification processes. Implemented a DevOps approach with Git Flow and integrated event and blog management features."
   },
   {
     "title": "Full Stack Engineer",
     "company": "Creations Design Studio",
-    "location": "Paris",
+    "location": "Villeneuve-St.-Georges, Île-de-France, France",
+    "locationType": "Remote",
     "startedAt": "Oct 2023",
     "endedAt": "Jan 2024",
     "type": "Internship",
     "skills": ["Laravel", "React", "Rest API", "MySQL"],
-    "description": "During my internship, I had the exciting opportunity to contribute to the development of an event organization application using Laravel and React.js technologies."
+    "description": "Contributed to the development of an event organization application using Laravel and React.js technologies."
   },
   {
     "title": "Full Stack Engineer",
@@ -26,6 +48,6 @@
     "endedAt": "Jun 2022",
     "type": "Internship",
     "skills": ["PHP", "MySQL", "HTML/CSS/JS", "Ajax"],
-    "description": "Developed web application for promote tourism in Drâa Tafilalet region, which included hotel reservations."
+    "description": "Developed a web application to promote tourism in the Drâa Tafilalet region, including hotel reservation features."
   }
 ]

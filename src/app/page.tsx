@@ -276,6 +276,7 @@ export default function Home() {
                       title: string,
                       company: string,
                       location: string,
+                      locationType: string,
                       startedAt: string,
                       endedAt: string,
                       type: string,
@@ -283,7 +284,7 @@ export default function Home() {
                       description: string
                     }, index) => (
                       <Experience key={index} title={experience.title} company={experience.company}
-                                  location={experience.location}
+                                  location={experience.location} locationType={experience.locationType}
                                   startedAt={experience.startedAt} endedAt={experience.endedAt} type={experience.type}
                                   skills={experience.skills}>
                         {experience.description}
