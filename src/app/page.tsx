@@ -30,7 +30,7 @@ export default function Home() {
     try {
       // Load skills
       const skills = await require("./data/skills.json")
-      setSkills(skills)
+      setSkills((skills as any).filter((skill: { featured: boolean; }) => skill.featured))
       // Load projects
       const projects = await require("./data/projects.json")
       setProjects(projects.filter((project: { featured: boolean; }) => project.featured))
@@ -176,7 +176,7 @@ export default function Home() {
         </section>
 
         {/* Skills */}
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800" id="skills">
+        <section className="w-full py-12 md:py-24 lg:py-24 bg-gray-100 dark:bg-gray-800" id="skills">
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
@@ -189,7 +189,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="mx-auto grid max-w-5xl items-center gap-6 py-12 lg:grid-cols-1 lg:gap-12">
+            <div className="mx-auto grid max-w-5xl items-center gap-6 pt-4 lg:grid-cols-1 lg:gap-12">
               <div className="flex flex-col justify-center space-y-4">
                 {!skills || skills.length === 0 ? (
                   <img
